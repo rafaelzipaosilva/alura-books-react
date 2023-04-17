@@ -33,14 +33,15 @@ const Resultado = styled.div`
 
     p {
         width: 200px;
+        color: #999999;
     }
 
     img {
         width: 100px;
     }
 
-    &::hover {
-        border: 1px solid white;
+    &:hover {
+        border: 3px solid #999999;
     }
 `
 
