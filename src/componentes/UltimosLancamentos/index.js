@@ -1,6 +1,8 @@
 import { Titulo } from '../Titulo';
 import { livros } from './dadosUltimosLancamentos';
 import styled from 'styled-components';
+import CardRecomenda from '../CardRecomenda';
+import imgLivro from '../../imagens/livro2.png';
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #DDDDDD;
@@ -23,12 +25,20 @@ function UltimosLancamentos() {
             <Titulo
                 cor='#EB9B00'
                 tamanhoFonte='36px'
-            >ÚLTIMOS LANÇAMENTOS</Titulo>
+            >
+                ÚLTIMOS LANÇAMENTOS
+            </Titulo>
             <NovosLivrosContainer>
                 {livros.map(livro => (
                     <img src={livro.src} alt={livro.nome} />
                 ))}
             </NovosLivrosContainer>
+            <CardRecomenda 
+                titulo='Talvez você se interesse por...'
+                subtitulo='Angular 11'
+                descricao='Construindo uma aplicacação com a plataforma Google'
+                img={imgLivro}
+            />
         </UltimosLancamentosContainer>
     )
 }
